@@ -1,0 +1,277 @@
+/* Base Styles - Sets up default styling for the entire document */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font stack */
+    line-height: 1.6; /* Improved readability with more space between lines */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: #333; /* Dark gray text for good readability */
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Header Section - Contains logo and main title */
+header {
+    background: linear-gradient(135deg, #e8491d 0%, #ff6b4a 100%); /* Orange gradient */
+    color: white; /* White text for contrast */
+    padding: 1.5rem 0; /* Vertical padding */
+    text-align: center; /* Center align content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Logo styling */
+.logo {
+    height: 60px; /* Fixed height */
+    margin-bottom: 0.5rem; /* Space below logo */
+}
+
+/* Navigation Bar */
+nav {
+    background: #35424a; /* Dark blue-gray background */
+    padding: 1rem 0; /* Vertical padding */
+}
+
+/* Navigation List - removes default list styling */
+nav ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullets */
+    display: flex; /* Horizontal layout */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Navigation Items */
+nav li {
+    margin: 0 1.5rem; /* Horizontal spacing between items */
+}
+
+/* Navigation Links */
+nav a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underlines */
+    font-weight: 500; /* Medium weight */
+    font-size: 1.1rem; /* Slightly larger than body text */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Navigation Hover Effect */
+nav a:hover {
+    color: #ff6b4a; /* Orange color on hover */
+}
+
+/* Main Artist Page Content Container */
+.artist-page {
+    max-width: 1200px; /* Limit width for large screens */
+    margin: 2rem auto; /* Center container with top/bottom margin */
+    padding: 0 1.5rem; /* Horizontal padding */
+}
+
+/* Artist Header Section - contains photo and basic info */
+.artist-header {
+    display: flex; /* Flex layout for side-by-side elements */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 3rem; /* Space below section */
+    gap: 2.5rem; /* Space between flex items */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Artist Photo - circular profile image */
+.artist-photo {
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height (creates circle) */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensure image fills space */
+    border: 5px solid #e8491d; /* Orange border */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+/* Artist Metadata - name, genre, bio */
+.artist-meta h1 {
+    font-size: 2.5rem; /* Large heading */
+    margin: 0 0 0.5rem; /* Spacing below */
+    color: #35424a; /* Dark blue-gray color */
+}
+
+/* Genre Tag - pill-shaped label */
+.genre-tag {
+    display: inline-block; /* Allows padding and width */
+    background: #35424a; /* Dark background */
+    color: white; /* White text */
+    padding: 0.3rem 1rem; /* Padding for pill shape */
+    border-radius: 20px; /* Rounded ends */
+    font-size: 0.9rem; /* Smaller text */
+    margin-bottom: 1rem; /* Space below */
+}
+
+/* Artist Biography */
+.bio {
+    max-width: 600px; /* Limit line length for readability */
+    line-height: 1.7; /* More space between lines */
+    color: #555; /* Slightly lighter than body text */
+}
+
+/* Discography Section Heading */
+.discography h2 {
+    font-size: 2rem; /* Large heading */
+    color: #35424a; /* Dark blue-gray */
+    border-bottom: 2px solid #e8491d; /* Orange underline */
+    padding-bottom: 0.5rem; /* Space between text and underline */
+    margin-bottom: 2rem; /* Space below heading */
+}
+
+/* Individual Album Container */
+.album {
+    display: flex; /* Flex layout for album cover + info */
+    gap: 2rem; /* Space between elements */
+    margin-bottom: 3rem; /* Space between albums */
+    background: white; /* White background */
+    padding: 1.5rem; /* Inner spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Album Cover Image */
+.album-cover {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure image fills space */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2); /* Shadow for depth */
+}
+
+/* Album Information Container */
+.album-info {
+    flex: 1; /* Take remaining space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+/* Album Title */
+.album-info h3 {
+    margin-top: 0; /* Remove default margin */
+    font-size: 1.8rem; /* Large heading */
+    color: #35424a; /* Dark blue-gray */
+}
+
+/* Album Description */
+.album-description {
+    color: #666; /* Medium gray */
+    margin-bottom: 1.5rem; /* Space below */
+    line-height: 1.6; /* Good readability */
+}
+
+/* Tracklist Container */
+.tracklist {
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Vertical stacking */
+    gap: 1rem; /* Space between tracks */
+}
+
+/* Individual Track */
+.track {
+    display: flex; /* Flex layout for track components */
+    align-items: center; /* Vertically center items */
+    gap: 1rem; /* Space between elements */
+    padding: 0.8rem 0; /* Vertical padding */
+    border-bottom: 1px solid #eee; /* Light separator */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Track Number */
+.track-number {
+    color: #777; /* Light gray */
+    width: 25px; /* Fixed width */
+    text-align: center; /* Center number */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+/* Track Title */
+.track-title {
+    flex: 1; /* Take available space */
+    min-width: 150px; /* Minimum width before wrapping */
+    font-weight: 500; /* Medium weight */
+}
+
+/* Audio Player */
+audio {
+    flex: 2; /* Take more space than other elements */
+    min-width: 250px; /* Minimum width */
+    height: 40px; /* Fixed height */
+}
+
+/* Custom Audio Player Styling */
+audio::-webkit-media-controls-panel {
+    background-color: #f1f1f1; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer Section */
+footer {
+    background: #35424a; /* Dark blue-gray */
+    color: white; /* White text */
+    text-align: center; /* Center content */
+    padding: 1.5rem; /* Inner spacing */
+    margin-top: 3rem; /* Space above footer */
+}
+
+/* Footer Links */
+footer a {
+    color: #ff6b4a; /* Orange color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+/* Footer Hover Effect */
+footer a:hover {
+    color: white; /* White on hover */
+}
+
+/* Responsive Design - Tablet Size */
+@media (max-width: 768px) {
+    /* Stack artist header vertically */
+    .artist-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    /* Center artist photo */
+    .artist-photo {
+        margin: 0 auto;
+    }
+    
+    /* Stack album info vertically */
+    .album {
+        flex-direction: column;
+    }
+    
+    /* Center album cover */
+    .album-cover {
+        margin: 0 auto 1.5rem;
+    }
+    
+    /* Adjust nav item spacing */
+    nav li {
+        margin: 0 1rem;
+    }
+}
+
+/* Responsive Design - Mobile Size */
+@media (max-width: 480px) {
+    /* Stack track elements vertically */
+    .track {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    /* Full width audio player */
+    audio {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    /* Adjust nav item spacing */
+    nav li {
+        margin: 0.5rem;
+    }
+}

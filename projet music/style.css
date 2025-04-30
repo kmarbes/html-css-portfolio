@@ -1,0 +1,544 @@
+/* Blurry Background Effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/artists/musique.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -2;
+    opacity: 0.8;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative;
+    background: transparent !important;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, rgba(232, 73, 29, 0.9), rgba(255, 107, 74, 0.9));
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#logo {
+    height: 70px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(44, 62, 80, 0.9);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6b4a;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+main section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #35424a;
+    border-bottom: 2px solid #e8491d;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Newsletter Form */
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletter label {
+    font-weight: 600;
+    color: #555;
+}
+
+.newsletter input[type="email"] {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #e8491d;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 0.75rem 1.2rem;
+    background: #e8491d;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+    background: #d63e1c;
+}
+/* Subscription Plans */
+.subscriptions {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.subscription-plans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.plan {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid #eee;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+}
+
+.plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #35424a;
+}
+
+.plan .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #e8491d;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.plan li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.plan li:last-child {
+    border-bottom: none;
+}
+
+.select-btn {
+    background: #35424a;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.select-btn:hover {
+    background: #e8491d;
+}
+
+/* Premium Plan Highlight */
+.plan.premium {
+    border: 2px solid #e8491d;
+    position: relative;
+}
+
+.plan.premium::before {
+    content: "Popular";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #e8491d;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Family Plan */
+.plan.family .price {
+    color: #3498db;
+}
+
+.plan.family {
+    border: 2px solid #3498db;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: rgba(44, 62, 80, 0.9);
+    color: white;
+    margin-top: 4rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+footer a {
+    color: #ff6b4a;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Genre Header Banner */
+.genre-header {
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: white;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.genre-header h2 {
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Artist Grid */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+/* Artist Card */
+.artist-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.artist-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.artist-info {
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.artist-info h3 {
+    margin: 0 0 1rem;
+    font-size: 1.3rem;
+    color: #35424a;
+}
+
+/* View Button */
+.view-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #e8491d;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+    background: #d63e1c;
+}
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to right, #f9f9f9, #fff);
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #e8491d, #ff6b4a);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+/* Navigation */
+nav {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6b4a;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+main section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #35424a;
+    border-bottom: 2px solid #e8491d;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #e8491d;
+    color: white;
+}
+
+table th, table td {
+    padding: 1.2rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+table td a {
+    color: #e8491d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+table td a:hover {
+    color: #d63e1c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 4rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+footer a {
+    color: #ff6b4a;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Newsletter Form */
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletter label {
+    font-weight: 600;
+    color: #555;
+}
+
+.newsletter input[type="email"] {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #e8491d;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 0.75rem 1.2rem;
+    background: #e8491d;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+    background: #d63e1c;
+}
+
